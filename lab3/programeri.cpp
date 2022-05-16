@@ -47,7 +47,7 @@ int siti[2] = {0,0}; //Koliko ih se je najelo od zadnje smijene
 void udji(bool p_vrsta){
     pthread_mutex_lock(&m);
     ceka[p_vrsta]++;
-    while (brojac[1 - p_vrsta] > 0 || siti[p_vrsta] > N && ceka[1 - p_vrsta] > 0){
+    while (brojac[1 - p_vrsta] > 0 || siti[p_vrsta] >= N && ceka[1 - p_vrsta] > 0){
         pthread_cond_wait(&red[p_vrsta], &m);
     }
     brojac[p_vrsta]++;
@@ -99,7 +99,7 @@ int main(){
 
     for (int i = 0; i < brojDretvi; i++){
         pthread_create(&thr_windows[i], NULL, Posjetitelj, &windowsP); //Windowss
-        pthread_create(&thr_windows[i], NULL, Posjetitelj, &linuxP); //Linux
+        pthread_create(&thr_linux[i], NULL, Posjetitelj, &linuxP); //Linux
     }
 
     for (int i = 0; i < brojDretvi; i++){
