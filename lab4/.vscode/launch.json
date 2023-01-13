@@ -1,0 +1,88 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch (gcc)",
+            "preLaunchTask": "Build with gcc",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/main.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": true,
+            "miDebuggerPath": "gdb.exe",
+            "linux": {
+                "MIMode": "gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        },
+        {
+            "name": "Launch (make)",
+            "preLaunchTask": "Build with make",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/main.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": true,
+            "miDebuggerPath": "gdb.exe",
+            "linux": {
+                "MIMode": "gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        },
+        {
+            "name": "Launch (g++)",
+            "preLaunchTask": "Build with g++",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/main.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": true,
+            "miDebuggerPath": "gdb.exe",
+            "linux": {
+                "MIMode": "gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        },
+        {
+            "name": "C Attach",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceRoot}/main.exe",
+            "miDebuggerPath": "gdb.exe",
+            "processId": "${command:pickProcess}",
+            "linux": {
+                "MIMode": "gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        }
+    ]
+}

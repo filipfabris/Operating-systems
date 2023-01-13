@@ -1,0 +1,51 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build with gcc",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "-o",
+                "main.exe",
+                "${file}",
+                "-lstdc++"
+            ]
+        },
+        {
+            "label": "Build with g++",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-o",
+                "main.exe",
+                "${file}"
+            ]
+        },
+        {
+            "label": "Build with make",
+            "type": "shell",
+            "command": "make"
+        },
+        {
+            "type": "shell",
+            "label": "cpp.exe build active file",
+            "command": "C:\\mingw\\mingw64\\bin\\cpp.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "C:\\mingw\\mingw64\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        }
+    ]
+}
